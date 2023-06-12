@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.filmmodu.ui.fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_movieDetailFragment"
+            app:destination="@id/movieDetailFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.filmmodu.ui.fragment.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search">
+    <action
+        android:id="@+id/action_SearchFragment_to_movieDetailFragment"
+        app:destination="@id/movieDetailFragment" />
+    </fragment>
+
+
+
+<!--    Fragment'i Dialog Fragment 'e çevirmek için Xml 'dede dialog yapmak gerek-->
+    <dialog
+        android:id="@+id/movieDetailFragment"
+        android:name="com.example.filmmodu.ui.fragment.MovieDetailFragment"
+        android:label="fragment_movie_detail"
+        tools:layout="@layout/fragment_movie_detail" >
+
+        <action
+            android:id="@+id/action_movieDetailFragment_to_playerFragment"
+            app:destination="@id/playerFragment" />
+<!--        <argument-->
+<!--            android:name="selectedMovie"-->
+<!--            app:argType="com.example.filmmodu.model.MovieModel" />-->
+    </dialog>
+
+    <dialog
+        android:id="@+id/playerFragment"
+        android:name="com.example.filmmodu.ui.fragment.PlayerFragment"
+        android:label="fragment_player"
+        tools:layout="@layout/fragment_player" />
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.example.filmmodu.ui.fragment.FavoriteFragment"
+        android:label="fragment_favorite"
+        tools:layout="@layout/fragment_favorite">
+        <action
+        android:id="@+id/action_FavoriteFragment_to_movieDetailFragment"
+        app:destination="@id/movieDetailFragment" />
+    </fragment>
+</navigation>

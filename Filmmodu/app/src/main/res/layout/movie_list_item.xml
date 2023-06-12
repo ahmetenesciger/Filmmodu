@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/_130sdp"
+    android:layout_height="@dimen/_200sdp"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:layout_marginLeft="@dimen/_10sdp">
+
+    <ImageView
+        android:id="@+id/iv_moviePoster"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_150sdp"
+        android:src="@drawable/vod_default_poster"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scroolView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintEnd_toEndOf="@+id/iv_moviePoster"
+        app:layout_constraintStart_toStartOf="@+id/iv_moviePoster"
+        app:layout_constraintTop_toBottomOf="@+id/iv_moviePoster">
+        <TextView
+            android:id="@+id/tv_movieName"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_16sdp"
+            android:ellipsize="marquee"
+            android:gravity="center_horizontal"
+            android:hint="movieName"
+            android:scrollbars="vertical"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp"
+             />
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

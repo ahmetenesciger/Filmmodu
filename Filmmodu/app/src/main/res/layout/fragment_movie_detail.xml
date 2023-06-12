@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".ui.fragment.MovieDetailFragment">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/_140sdp"
+        android:layout_height="@dimen/_200sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:src="@drawable/vod_default_poster"
+        app:layout_constraintBottom_toTopOf="@+id/movie_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/favAddButton"
+        android:layout_width="@dimen/_34sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:src="@drawable/movie_favicon"
+        android:background="@null"
+        android:scaleType="fitXY"
+        app:layout_constraintCircleRadius="@dimen/_30sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/movie_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="44dp"
+        android:textColor="@color/white"
+        android:text="movie name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/movie_year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="year"
+        app:layout_constraintBottom_toBottomOf="@+id/movie_name"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/movie_name" />
+
+
+    <TextView
+        android:id="@+id/movie_description"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit ="marquee_forever"
+        android:scrollHorizontally="true"
+        android:repeatCount="infinite"
+        android:repeatMode="restart"
+        android:clickable="false"
+        android:focusable="true"
+        android:layout_width="wrap_content"
+        android:maxWidth="@dimen/_220sdp"
+        android:maxHeight="@dimen/_430sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:textColor="@color/white"
+        android:text="Return to a world of two realities:Return to a world of two realities:Return to a world of two realities:Return to a world of two realities:Return to a world of two realities:Return to a world of two realities:Return to a world of two realities: one, everyday life; the other, what lies behind it. To find out if his reality is a construct, to truly know himself, Mr. Anderson will have to choose to follow the white rabbit once more."
+        android:textSize="@dimen/_8sdp"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintStart_toStartOf="@+id/movie_name"
+        app:layout_constraintTop_toBottomOf="@+id/movie_name"/>
+    <Button
+        android:id="@+id/playButton"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:text="Play"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.715" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
