@@ -15,6 +15,7 @@ class DebouncingQueryTextListener(
     private var debouncePeriod: Long = 800
 
     private val dummy:Int=0
+    private val dummy2:Int=2
     private val coroutineScope = lifecycle.coroutineScope
     private var searchJob: Job? = null
 
